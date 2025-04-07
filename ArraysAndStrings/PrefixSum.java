@@ -1,8 +1,6 @@
 package ArraysAndStrings;
 
 
-
-
 // A Prefix Sum Array is an array where each element at index i stores the sum of all elements from the start up to index i in the original array.
 
 //  Why Use It?
@@ -12,7 +10,7 @@ package ArraysAndStrings;
 
 //  Use Cases
 //  Fast range sum queries
-//  Subarray sum problems (e.g., “count subarrays that sum to k”)
+//  Sub-array sum problems (e.g., “count sub-arrays that sum to k”)
 //  Difference arrays (for range updates)
 //  2D prefix sums (for matrices)
 
