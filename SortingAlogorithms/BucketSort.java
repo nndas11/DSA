@@ -15,6 +15,11 @@ package SortingAlogorithms;
 //  Gather: Concatenate all sorted buckets.
 
 
+//  Time Complexity:
+//        Best/Average: O(n + k) — when data is uniformly distributed and sorting inside buckets is efficient
+//        Worst: O(n²) — if all elements end up in one bucket
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
