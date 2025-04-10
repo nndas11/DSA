@@ -12,6 +12,9 @@ package Backtracking;
 
 // This is basically used for exhaustive search, like all solutions
 
+//  Time Complexity: O(n * 2 ** n)
+//  Space Complexity: O(n)
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,10 +34,12 @@ public class Backtracking {
             solution.add(new ArrayList<>(subset));
             return;
         }
+//        without taking the element.
         subsets(arr,solution, i +1,subset);
 
+//        taking the element.
         subset.add(arr[i]);
         subsets(arr, solution, i+1, subset);
-        subset.remove(subset.size() - 1);
+        subset.remove(subset.size() - 1); // -> Undo the decision -> backbone of backtracking.
     }
 }
