@@ -16,6 +16,8 @@ public class BFS {
     static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
     static boolean[] visited;
 
+
+
     // Add edge to undirected graph
     public static void addEdge(int u, int v) {
         graph.get(u).add(v);
