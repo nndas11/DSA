@@ -25,16 +25,18 @@ public class DetectCycle {
 
         addEdge(1,2);
         addEdge(1,3);
-        addEdge(2,3);
+//        addEdge(2,3);
 
         System.out.println(detectCycleUndirectedBFS(v, adjacencyList));
+        System.out.println(detectCycleUndirectedDFS(v, adjacencyList));
 
     }
 
 //    We go different path from the starting node and reach the same node -> Cycle detected.
-//    In queue, we store the node and the node from which we came
+//    In queue, we store the node and the node from which we came from.
     public static boolean detectCycleUndirectedBFS(int v, List<List<Integer>> adjacencyList){
         boolean[] visited = new boolean[v];
+//        This for loop is to check in each component of the graph.
         for(int i=0;i<v;i++){
             if(!visited[i]){
                 if(checkCycleUndirectedBFS(i, v, adjacencyList, visited))
@@ -67,7 +69,27 @@ public class DetectCycle {
         return false;
     }
 
-    public static boolean detectCycleUndirectedDFS(){
-        return true;
+    public static boolean detectCycleUndirectedDFS(int v, List<List<Integer>> adjacencyList){
+        boolean[] visited = new boolean[v];
+        for(int i=0;i<v;i++){
+            if(!visited[i]){
+                if(checkCycleUndirectedDFS(i, -1, adjacencyList, visited))
+                    return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean checkCycleUndirectedDFS(int src, int parent, List<List<Integer>> adjacencyList, boolean[] visited){
+        visited[src] = true;
+        for (int neighbour: adjacencyList.get(src)){
+            if(!visited[neighbour]){
+                if(checkCycleUndirectedDFS(neighbour, src, adjacencyList, visited))
+                    return true;
+            }else if(neighbour != parent){
+                return true;
+            }
+        }
+        return false;
     }
 }
