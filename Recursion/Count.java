@@ -27,6 +27,7 @@ public class Count {
 
     public static int countSum(List<Integer> arr, int index, int currSum, List<Integer> curSubset, int target){
 
+//        we can write this only when array contains only positives
         if(currSum > target)
             return 0;
 
