@@ -6,6 +6,9 @@ package Graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
+//  Multi-source BFS questions can also be done using simple BFS -> but time complexity will be huge.
+//  For eg:- O(m*n)2 can be done in O(m*n) in multi-source BFS.
+
 public class MultiSourceBFS {
     public static void main(String[] args) {
         int[][] grid = {

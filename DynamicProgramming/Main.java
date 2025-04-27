@@ -13,6 +13,21 @@ package DynamicProgramming;
 // 2 methods:
 //      1. Tabulation -> bottom-up -> we will go from base case to required case.
 //      2. Memoization -> top-down -> recursion like
+
+
+//  How can we identify this is a DP problem:
+//  First understand and figure out this is a recursion problem.
+//  1.  count the no of ways.
+//  2.  multiple ways of doing this -> what is the minimum or maximum.
+
+
+//  SHORTCUT:
+//  1.  Try to represent the problem in terms of index.
+//  2.  Do all possible stuff on the index according to the problem statement.
+//  3.  count all the ways -> sum of all stuff.
+//      find min       -> min of all stuff.
+//      find max       -> max of all stuff.
+
 public class Main {
     public static void main(String[] args) {
 
