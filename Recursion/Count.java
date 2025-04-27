@@ -26,6 +26,10 @@ public class Count {
     }
 
     public static int countSum(List<Integer> arr, int index, int currSum, List<Integer> curSubset, int target){
+
+        if(currSum > target)
+            return 0;
+
         if(index == arr.size()){
             if(currSum == target){
                 return 1;
