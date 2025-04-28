@@ -15,7 +15,7 @@ package Graphs;
 
 
 //  DFS can be done using recursion and also iteratively using stack.
-
+//  In DFS also we can create directions array and loop through that and call the recursion.
 
 //  Time Complexity:   O(V + E)
 //  Space Complexity:  O(V + E)
