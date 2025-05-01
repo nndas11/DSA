@@ -2,6 +2,12 @@ package Graphs;
 
 //Given a boolean 2D matrix grid of size n * m. You have to find the number of distinct islands where a group of connected 1s (horizontally or vertically) forms an island. Two islands are considered to be distinct if and only if one island is not equal to another (not rotated or reflected).
 
+//  When we think Distinct -> we go for HashSet -> correct thinking is that.
+//  Now how can we store these indexes, just storing won't work as they are different.
+//  Another thinking will be to store the sides, but won't work like cases of hollow and all.
+//  So the answer is to store all indexes itself, but before storing we find diff with the base node( node from where the BFS or DFS starts) and store those
+//  Also in JAVA, we need to store them as string for the hashmap to work
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
