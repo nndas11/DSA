@@ -3,6 +3,9 @@ package Graphs;
 
 //  Color the graph with 2 colors such that no two adjacent nodes have the same color.
 //  When done with BFS, we can change the color after each level.
+//  Linear ordering of nodes -> bipartite
+//  if the cycle is even length -> bipartite
+//  if the cycle is odd length -> bipartite
 
 public class BipartiteGraph {
     public static void main(String[] args) {
