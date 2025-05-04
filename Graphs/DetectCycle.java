@@ -14,6 +14,10 @@ public class DetectCycle {
     static public int v = 6;
     static public List<List<Integer>> adjacencyList = new ArrayList<>();
 
+    public static void addEdgeDirected(int u, int v){
+        adjacencyList.get(u).add(v);
+    }
+
     public static void addEdge(int u, int v) {
         adjacencyList.get(u).add(v);
         adjacencyList.get(v).add(u);
@@ -23,12 +27,18 @@ public class DetectCycle {
             adjacencyList.add(new ArrayList<>());
         }
 
-        addEdge(1,2);
-        addEdge(1,3);
+//        addEdge(1,2);
+//        addEdge(1,3);
 //        addEdge(2,3);
 
-        System.out.println(detectCycleUndirectedBFS(v, adjacencyList));
-        System.out.println(detectCycleUndirectedDFS(v, adjacencyList));
+//        System.out.println(detectCycleUndirectedBFS(v, adjacencyList));
+//        System.out.println(detectCycleUndirectedDFS(v, adjacencyList));
+
+        addEdgeDirected(1,2);
+        addEdgeDirected(2,3);
+        addEdgeDirected(3,1);
+
+        System.out.println(detectCycleDirectedDFS());
 
     }
 
@@ -90,6 +100,42 @@ public class DetectCycle {
                 return true;
             }
         }
+        return false;
+    }
+
+
+//    The Same algorithm for the undirected won't work for the directed graph
+//    We have to visit the same node in the same path.
+//    So simple way will be to use, visited and path visited array.
+
+    public static boolean detectCycleDirectedDFS(){
+        boolean[] visited = new boolean[v];
+        boolean[] pathVisited = new boolean[v];
+
+        for(int i=0;i<v;i++){
+            if(!visited[i]){
+                if(checkCycleDirectedDFS(i, visited, pathVisited))
+                        return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static boolean checkCycleDirectedDFS(int src, boolean[] visited, boolean[] pathVisited){
+
+        visited[src] = true;
+        pathVisited[src] = true;
+
+        for(int neighbour: adjacencyList.get(src)){
+            if(!visited[neighbour]){
+                if(checkCycleDirectedDFS(neighbour, visited, pathVisited))
+                    return true;
+            } else if(pathVisited[neighbour])
+                return true;
+        }
+
+        pathVisited[src] = false;
         return false;
     }
 }
