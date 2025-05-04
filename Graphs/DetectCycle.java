@@ -107,6 +107,7 @@ public class DetectCycle {
 //    The Same algorithm for the undirected won't work for the directed graph
 //    We have to visit the same node in the same path.
 //    So simple way will be to use, visited and path visited array.
+//    We can use single visited array and keep track of both
 
     public static boolean detectCycleDirectedDFS(){
         boolean[] visited = new boolean[v];
