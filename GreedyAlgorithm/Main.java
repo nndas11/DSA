@@ -15,7 +15,7 @@ package GreedyAlgorithm;
 //  How to Know if Greedy Works?
 //  Does making a greedy choice now guarantee the best final answer?
 //  Try with a few counterexamples or prove with induction.
-
+//  All questions may not give the answer with greedy approach.
 
 public class Main {
 }
