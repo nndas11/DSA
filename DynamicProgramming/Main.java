@@ -11,7 +11,7 @@ package DynamicProgramming;
 //  3. Check if the value is present before competing again.
 
 // 2 methods:
-//      1. Tabulation -> bottom-up -> we will go from base case to required case.
+//      1. Tabulation -> bottom-up -> we will go from base case to required case. we fill the base-cases we find in recursion here.
 //      2. Memoization -> top-down -> recursion like
 
 
