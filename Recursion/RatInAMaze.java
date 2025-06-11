@@ -9,6 +9,8 @@ public class RatInAMaze {
     public static int[] yDir = {0, 1, 0, -1};
     public static char[] dir = {'D', 'R', 'U', 'L'};
 
+//    if you need answer in lexicographical order, then traverse -> D L R U
+
     public static void main(String[] args) {
         List<String> result = new ArrayList<>();
         int[][] maze = {
