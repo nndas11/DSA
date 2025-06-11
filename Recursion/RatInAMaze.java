@@ -35,19 +35,21 @@ public class RatInAMaze {
             return;
         }
 
-        maze[r][c] = 0; // MARK IT VISITED -> BY BLOCKING
+//        maze[r][c] = 0; // MARK IT VISITED -> BY BLOCKING
 
         for(int i=0;i<4;i++){
             int rc = xDir[i];
             int cc = yDir[i];
             char d = dir[i];
 
+            maze[r][c] = 0;
             path.append(d);
             ratInMaze(result, path, maze, r + rc, c + cc);
             path.deleteCharAt(path.length() - 1);
+            maze[r][c] = 1;
         }
 
-        maze[r][c] = 1; // MARK AS UNVISITED
+//        maze[r][c] = 1; // MARK AS UNVISITED
     }
 
 
