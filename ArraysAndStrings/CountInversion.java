@@ -10,6 +10,8 @@ package ArraysAndStrings;
 //  Optimal Solution -> Using Merge sort with the modified code.
 //  We add logic into the merge sort before merging each part.
 //  Merge sort just need to include 1 line of code.
+//  TC: O(n log n).
+//  SC: O(n) -> temporary array.
 
 import java.util.ArrayList;
 
