@@ -3,7 +3,7 @@ package Recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-//  testing
+
 public class RatInAMaze {
 
     public static int[] xDir = {1, 0, -1, 0};
