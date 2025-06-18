@@ -26,7 +26,7 @@ public class MaxSumOfNonAdjacentElements {
     }
 
 //    TC: O(n)
-    public static int maxSumOfNonAdjacentElementsDPOptmised(int[] arr, int[] dp, int index){
+    public static int maxSumOfNonAdjacentElementsDPOptimised(int[] arr, int[] dp, int index){
         if(index == 0)
             return arr[index];
         if(index < 0)
@@ -36,8 +36,8 @@ public class MaxSumOfNonAdjacentElements {
             return dp[index];
 
 
-        int pick = arr[index] + maxSumOfNonAdjacentElementsDPOptmised(arr, dp, index - 2);
-        int nonPick = maxSumOfNonAdjacentElementsDPOptmised(arr, dp, index - 1);
+        int pick = arr[index] + maxSumOfNonAdjacentElementsDPOptimised(arr, dp, index - 2);
+        int nonPick = maxSumOfNonAdjacentElementsDPOptimised(arr, dp, index - 1);
 
         dp[index] = Math.max(pick, nonPick);
         return dp[index];
