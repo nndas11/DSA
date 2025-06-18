@@ -17,5 +17,8 @@ package GreedyAlgorithm;
 //  Try with a few counterexamples or prove with induction.
 //  All questions may not give the answer with greedy approach.
 
+
+//  ""WHEN GREEDY ALGORITHM FAILS -> THEN TRY ALL POSSIBLE COMBINATIONS""
+
 public class Main {
 }
