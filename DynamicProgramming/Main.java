@@ -1,5 +1,11 @@
 package DynamicProgramming;
 
+//  WHEN ASKED DP PROBLEM IN INTERVIEW
+//  FIRST DO RECURSION
+//  THEN MEMOIZATION. -> NEVER STOP HERE
+//  THEN TABULATION.
+//  THEN IF POSSIBLE DO SPACE OPTIMISED. -> NOT THAT REQUIRED FOR THE INTERVIEWS.
+
 //  https://leetcode.com/discuss/post/662866/dp-for-beginners-problems-patterns-sampl-atdb/
 
 //  Overlapping sub-problems -> then we store the values of sub-problems in map/ table.
