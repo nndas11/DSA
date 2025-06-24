@@ -38,7 +38,7 @@ public class DetectCycle {
         addEdgeDirected(2,3);
         addEdgeDirected(3,1);
 
-        System.out.println(detectCycleDirectedDFS());
+        System.out.println(detectCycleDirectedBFS());
 
     }
 
@@ -139,4 +139,47 @@ public class DetectCycle {
         pathVisited[src] = false;
         return false;
     }
+
+//    We can use topological sorting
+//    We know its only applicable for DAG.
+//    So if we are not able to do it -> then it contains a cycle.
+    public static boolean detectCycleDirectedBFS(){
+
+       return checkCycleDirectedBFS();
+    }
+
+    public static boolean checkCycleDirectedBFS(){
+        int[] inDegree = new int[v];
+        Queue<Integer> queue = new LinkedList<>();
+
+        for (int i=0;i<v;i++){
+            for (int node: adjacencyList.get(i))
+                inDegree[node]++;
+        }
+
+        for (int i=0;i<v;i++){
+            if(inDegree[i] == 0)
+                queue.add(i);
+        }
+
+//        we can use ans array and push elements to it like khans algorithm
+//        then check for the size and it it is v -> then no cycle
+//        since we only need the count -> using a varaible here.
+        int count  = 0;
+
+        while (!queue.isEmpty()){
+            int node = queue.remove();
+            count++;
+
+            for (int n: adjacencyList.get(node)){
+                inDegree[n]--;
+                if (inDegree[n] == 0)
+                    queue.add(n);
+            }
+        }
+
+        return count!=v;
+    }
+
+
 }
