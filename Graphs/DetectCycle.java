@@ -148,6 +148,7 @@ public class DetectCycle {
        return checkCycleDirectedBFS();
     }
 
+
     public static boolean checkCycleDirectedBFS(){
         int[] inDegree = new int[v];
         Queue<Integer> queue = new LinkedList<>();
