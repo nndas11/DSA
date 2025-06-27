@@ -1,4 +1,4 @@
-package Graphs;
+package Graphs.ShortestPath;
 
 //  For graphs with weighted edges -> represent them as List of Pairs.
 
@@ -68,8 +68,6 @@ public class ShortestPathInDAG {
         dist[sourceNode] = 0;
         while (!stack.isEmpty()){
             int node = stack.pop();
-
-
 
 //            we can remove this check -> will also work
             if(dist[node] != Integer.MAX_VALUE){
