@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class SumEqualsTarget {
     public static void main(String[] args) {
-        System.out.println(spaceOptimisation(new int[]{1,2,3,4}, 3));
+        System.out.println(tabulation(new int[]{1,2,3,4}, 3));
     }
 
 
@@ -53,10 +53,10 @@ public class SumEqualsTarget {
 
         for (int i=1;i<arr.length;i++){
             for (int j=1;j<=target;j++){
-                boolean notTake = dp[i - 1][target];
+                boolean notTake = dp[i - 1][j];
                 boolean take = false;
-                if(arr[i] <= target)
-                    take = dp[i - 1][target - arr[i]];
+                if(arr[i] <= j)
+                    take = dp[i - 1][j - arr[i]];
 
                 dp[i][j] = (take || notTake);
             }
@@ -78,10 +78,10 @@ public class SumEqualsTarget {
                 boolean[] curr = new boolean[target+1];
                 curr[0] = true;
                 for (int j=1;j<=target;j++){
-                    boolean notTake = prev[target];
+                    boolean notTake = prev[j];
                     boolean take = false;
-                    if(arr[i] <= target)
-                        take = prev[target - arr[i]];
+                    if(arr[i] <= j)
+                        take = prev[j - arr[i]];
 
                     curr[j] = (take || notTake);
                 }
