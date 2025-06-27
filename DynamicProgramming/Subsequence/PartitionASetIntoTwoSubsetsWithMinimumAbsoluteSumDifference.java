@@ -3,6 +3,13 @@ package DynamicProgramming.Subsequence;
 
 //  Leetcode question has negative elements in the array -> so this solution won't work.
 
+//  So here we know the totalSum, we need to find diff between s1 and s2.
+//  If we find s1, then s2 = totalSum - s1 only.
+
+//  So the DP - array, dp[i][j] -> here means whether from 0 - i index there is a j target subset is present or not.
+//  so we need to check in the whole array
+//  so the last row, we can check whether each target from 1 to totalSum is present or not and find the absolute minimum difference.
+
 public class PartitionASetIntoTwoSubsetsWithMinimumAbsoluteSumDifference {
     public static void main(String[] args) {
         System.out.println("Minimum Absolute Difference is: " + partitionASetIntoTwoSubsetsWithMinimumAbsoluteSumDifference(new int[]{1,2,3,4}));
