@@ -5,6 +5,11 @@ import java.util.Arrays;
 //  TC: O(2^n) -> O(n * target) -> after DP
 //  SC: O(n*target) + O(n)
 
+
+//  All these we are doing works for positive integers
+//  What happens for negative integers ->
+//  because the 2-d array can't have negative indexes -> so how will we solve this
+
 public class CountSubsetsWithSumK {
     public static void main(String[] args) {
         int[] arr = {1,2,2,3};
