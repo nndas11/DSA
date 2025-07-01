@@ -5,6 +5,18 @@ import java.util.Arrays;
 //  TC: O(2^n) -> O(n * target) -> after DP
 //  SC: O(n*target) + O(n)
 
+//  So this solution works when there is no 0.
+//  In the given question -> constraint was actually, each element is greater than or equal to 1.
+//  Where is the PROBLEM in the current code:
+//      base-case -> target == 0 -> so it won't go deep in the recursion when target = 0. regardless of the index.
+//  So we can update the code to include this condition
+
+//  How to update the problem to include the case of 0?
+//  POSSIBLE ONE SOLUTION: Find no of zeros in the array -> so total way to represent is: 2^n.
+//  Now answer * 2^n -> total no of ways.
+
+//
+
 
 //  All these we are doing works for positive integers
 //  What happens for negative integers ->
@@ -12,25 +24,35 @@ import java.util.Arrays;
 
 public class CountSubsetsWithSumK {
     public static void main(String[] args) {
-        int[] arr = {1,2,2,3};
-        int target = 3;
+        int[] arr = {0,0,0,1};
+        int target = 1;
 //        we need to take target + 1 -> as we are looking for the target.
         int[][] dp = new int[arr.length][target + 1];
         for(int[] row: dp)
             Arrays.fill(row, -1);
 
-//        System.out.println(countSumK(arr.length - 1, arr, target, dp));
-        System.out.println(tabulation(arr, 3));
+        System.out.println(countSumK(arr.length - 1, arr, target, dp));
+//        System.out.println(tabulation(arr, 3));
     }
 
     public static int countSumK(int index, int[] arr, int taget, int[][] dp){
-        if(taget == 0)
-            return 1;
+//        if(taget == 0)
+//            return 1;
 
         if(index == 0){
-            if(arr[index] == taget)
-                return 1;
+//            For cases including 0
+//            3 cases possible
+//            1. arr[0] = 0 and target = 0 -> so 2 ways -> take or not take.
+//            2. arr[0] != 0 and target = 0 -> so 1 way -> not take.
+//            3. arr[0] = target ->             so 1 way -> take.
+
+            if(taget == 0 && arr[0] == 0)   return 2;
+            if(taget == 0 || arr[0] == taget)  return 1;
             return 0;
+
+//            if(arr[index] == taget)
+//                return 1;
+//            return 0;
         }
 
         if(dp[index][taget] != -1)
