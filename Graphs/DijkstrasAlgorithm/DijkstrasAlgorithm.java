@@ -1,4 +1,4 @@
-package Graphs;
+package Graphs.DijkstrasAlgorithm;
 
 //  Dijkstra's Algorithm is used to find the shortest path possible.
 //  We are given a source node, from that we need to find the shortest path possible to every node.
