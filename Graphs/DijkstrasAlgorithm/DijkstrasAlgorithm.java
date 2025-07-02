@@ -1,5 +1,7 @@
 package Graphs.DijkstrasAlgorithm;
 
+//  USE THE PRIORITY QUEUE METHOD IN INTERVIEWS AND IN LEETCODE.
+
 //  Dijkstra's Algorithm is used to find the shortest path possible.
 //  We are given a source node, from that we need to find the shortest path possible to every node.
 //  We will be dealing with weighted graph -> as this is the shortest path.
