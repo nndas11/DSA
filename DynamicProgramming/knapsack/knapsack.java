@@ -41,7 +41,7 @@ public class knapsack {
 
 //        System.out.println(knapsack(value, weight, 6, n));
 
-        System.out.println(spaceOptimised(value, weight, 6));
+        System.out.println(spaceOptimised2(value, weight, 6));
     }
 
     public static int knapsack(int[] value, int[] weight, int bagWeight, int n){
@@ -107,8 +107,38 @@ public class knapsack {
         }
 
         for (int i=1;i<value.length;i++){
-            int[] curr = new int[W + 1];
+//            int[] curr = new int[W + 1];
             for (int j=0;j<=W;j++){
+                int notTake = prev[j];
+                int take = Integer.MIN_VALUE;
+
+                if(weight[i] <= j){
+                    take = value[i] + prev[W - weight[i]];
+                }
+
+                prev[j] = Math.max(take, notTake);
+            }
+//            prev = curr;
+        }
+
+
+        return prev[W];
+    }
+
+//    We can further space optimise this.
+//    Using only one array instead of two.
+//    Just fill the weight in the reverse way.
+
+    public static int spaceOptimised2(int[] value, int[] weight, int W){
+        int[] prev = new int[W + 1];
+
+        for (int i=weight[0];i<=W;i++){
+            prev[i] = value[0];
+        }
+
+        for (int i=1;i<value.length;i++){
+            int[] curr = new int[W + 1];
+            for (int j=W;j>=0;j--){
                 int notTake = prev[j];
                 int take = Integer.MIN_VALUE;
 
