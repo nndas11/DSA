@@ -8,6 +8,7 @@ package Graphs.DijkstrasAlgorithm;
 //  For weighted graph -> we will be representing them using pairs in adjacency list.
 //  Since we are dealing with distance, we will have distance array -> which contains shortest distance to all nodes.
 
+//  Dijkstra’s algorithm works for both directed and undirected graphs
 
 //  Dijkstra's Algorithm does not work for NEGATIVE WEIGHT CYCLE.
 //  Won't work even when there is one negative edge or cycle with negative sum.
