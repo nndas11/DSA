@@ -4,7 +4,10 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-//  PQ not needed as the value is increasing level by level -> so queue only needed.
+//  PQ not needed as the value is increasing level by level -> so simple BFS -> so queue only needed.
+
+//  A question which we can visualize as a Tree problem, most probably would be able to solve using Graph as Tree is a part of Graph.
+
 
 public class MinimumMultiplicationstoReachEnd {
     public static void main(String[] args) {
@@ -13,6 +16,7 @@ public class MinimumMultiplicationstoReachEnd {
 
     public static int helper(int[] arr, int start, int end){
         Queue<Pair> queue = new LinkedList<>();
+//        nodes can be any number from 0 to 100000 as we're doing modulo 100000.
         int[] distance = new int[100000];
         Arrays.fill(distance, Integer.MAX_VALUE);
         distance[start] = 0;
