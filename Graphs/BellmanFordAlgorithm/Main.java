@@ -70,11 +70,10 @@ public class Main {
                 int v = edge[1];
                 int w = edge[2];
 
-//                in the Nth relaxation also the distance is array is getting updated -> then negative cylce
+//                in the Nth relaxation also the distance is array is getting updated -> then negative cycle
 //                return -1
                 if(distance[u] != (int)1e9 && distance[u] + w < distance[v]){
                     return new int[]{-1};
-
                 }
 
         }
