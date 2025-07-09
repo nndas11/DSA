@@ -39,16 +39,19 @@ package Graphs.DisjoinSetVERYIMPORTANT;
 //      return parent[u] = findParent(u) ;
 
 
+//  Why connect smaller to larger?
+//  to minimize the height and path compression take less time as less distance to travel.
+
 //  TC: O(4alpha) -> O(4) -> alpha is almost equal to one -> explanation not needed in interviews.
 
 public class Main {
     public static void main(String[] args) {
         DisjoinSet disjoinSet = new DisjoinSet(7);
-        disjoinSet.unionByRank(1, 2);
-        disjoinSet.unionByRank(2, 3);
-        disjoinSet.unionByRank(4, 5);
-        disjoinSet.unionByRank(6, 7);
-        disjoinSet.unionByRank(5, 6);
+        disjoinSet.unionBySize(1, 2);
+        disjoinSet.unionBySize(2, 3);
+        disjoinSet.unionBySize(4, 5);
+        disjoinSet.unionBySize(6, 7);
+        disjoinSet.unionBySize(5, 6);
 
         if(disjoinSet.findUParent(3) == disjoinSet.findUParent(7))
             System.out.println("Same Component");
@@ -57,7 +60,7 @@ public class Main {
 
 //        we can add dynamically
 
-        disjoinSet.unionByRank(3, 7);
+        disjoinSet.unionBySize(3, 7);
         if(disjoinSet.findUParent(3) == disjoinSet.findUParent(7))
             System.out.println("Same Component");
         else
