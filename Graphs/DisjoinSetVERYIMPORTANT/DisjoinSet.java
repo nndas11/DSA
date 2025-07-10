@@ -22,7 +22,7 @@ public class DisjoinSet {
 
 //    Finds the Ultimate Parent of a node.
 //    Path compression also happens here.
-    int findUParent(int node){
+    public int findUParent(int node){
         if(node == parent.get(node))
             return node;
 
@@ -31,7 +31,7 @@ public class DisjoinSet {
         return parent.get(node);
     }
 
-    void unionByRank(int u, int v){
+    public void unionByRank(int u, int v){
 //        find ulp parent of both
         int ulpU = findUParent(u);
         int ulpV = findUParent(v);
