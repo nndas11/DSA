@@ -37,7 +37,7 @@ public class DisjoinSet {
         int ulpV = findUParent(v);
 
 //        if belonging to same component do nothing.
-        if (ulpU == ulpV)   return;
+        if (ulpU == ulpV)   return; // undirected works using this -> if already added then return
 
 //        Comparing the rank of ultimate parents -> smaller gets connected to bigger -> so smaller parent is big.
         if(rank.get(ulpU) < rank.get(ulpV)){
@@ -45,7 +45,7 @@ public class DisjoinSet {
         } else if (rank.get(ulpV) < rank.get(ulpU)){
             parent.set(ulpV, ulpU);
         }else {
-//            if same we can attach any way, to whichever we attaching -> its rank will increase.
+//            if same we can attach any way, to whichever we're attaching -> its rank will increase.
             parent.set(ulpV, ulpU);
             rank.set(ulpU, rank.get(ulpU) + 1);
         }
