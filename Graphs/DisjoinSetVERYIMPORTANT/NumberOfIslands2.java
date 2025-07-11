@@ -62,6 +62,7 @@ public class NumberOfIslands2 {
             int row = operation[0];
             int col = operation[1];
 
+//            here visited is used just for skipping the already processed same edge.
             if(visited[row][col]){
                 ans.add(count);
                 continue;
