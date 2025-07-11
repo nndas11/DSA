@@ -39,6 +39,15 @@ package Graphs.DisjoinSetVERYIMPORTANT;
 //      return parent[u] = findParent(u) ;
 
 
+//  We represent each cell as a node in the Disjoint Set-> so we need a connection between the node number and cell(row, col)
+//  (row, col) = row * m + col
+//  n -> total number of rows.
+//  m -> total number of cols.
+
+//  Also there are problems where we treat each row as a node and each col as a node
+//  Example question: Most Stones Removed with Same Row or Column
+
+
 //  Why connect smaller to larger?
 //  to minimize the height and path compression take less time as less distance to travel.
 
