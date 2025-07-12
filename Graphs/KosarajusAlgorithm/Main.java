@@ -23,6 +23,8 @@ package Graphs.KosarajusAlgorithm;
 //   5. Ok! Alright, One final caveat, let's say we start traversing from sc2? Then in one visit we can traverse both sc1,sc2. To prevent this, we will sort the vertices in finish time of dfs and visit the vertices who finished last. So, if in original graph, there is a relation like `sc1-->sc2`, sc1 will always finish last and thus will be picked first.
 //   6. Does BFS work? No, we have to sort according to finish time.
 
+//  TC: O(v + e)
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
