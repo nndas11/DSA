@@ -14,6 +14,8 @@ package Graphs.TarjansAlgorithm;
 
 //  Even if visited -> we can update the low
 
+//  if(low[adjNode] > time[node] -> then node - adjNode ---> bridge.
+
 public class Main {
     public static void main(String[] args) {
 
