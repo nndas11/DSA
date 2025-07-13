@@ -30,6 +30,8 @@ package Graphs.DijkstrasAlgorithm;
 //  Update distance array -> only when updating push that to PQ.
 //  At end, we will have the distance array with the shortest distance from source node to all nodes.
 
+//  This is a Greedy Algorithm -> which takes the minimum at each step and does not care about others.
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

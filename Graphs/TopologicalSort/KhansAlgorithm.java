@@ -1,4 +1,4 @@
-package Graphs;
+package Graphs.TopologicalSort;
 
 //  Topological Sorting using BFS is known as Khans Algorithm.
 //  Kahn's algorithm is based on indegree of nodes:

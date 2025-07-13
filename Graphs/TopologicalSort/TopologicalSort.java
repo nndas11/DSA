@@ -1,4 +1,4 @@
-package Graphs;
+package Graphs.TopologicalSort;
 
 
 //  Topological sort is a linear ordering of vertices
