@@ -29,6 +29,7 @@ public class JobSequencingProblem {
     }
 
 //    TC: O(n logn) + O(n)*O(maxDeadline).
+//    SC: O(maxDeadline)
     public static int jobSequencingProblem(int[][] jobs){
 //        jobId, deadline, profit.
         int n = jobs.length;
@@ -48,9 +49,9 @@ public class JobSequencingProblem {
             int deadline = job[1];
             int profit = job[2];
 
-//            TC: O(maxDeadline)
+//          TC: O(maxDeadline
+//          Trying to get free slot and assign the job
             for(int i=deadline;i>=1;i--){
-//                get free slot and assign the job
 //                we don't care if the latter ones can find a slot -> as maximum profit ones already ahead.
                 if(daySlots[i] == -1){
                     daySlots[i] = jobId;
