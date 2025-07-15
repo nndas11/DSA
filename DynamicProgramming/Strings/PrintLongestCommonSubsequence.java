@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 public class PrintLongestCommonSubsequence {
     public static void main(String[] args) {
-        System.out.println(printLongestCommonSubsequence("abcde", "bdgek"));
+        System.out.println(printLongestCommonSubsequence("bbbaaaba", "bbababbb"));
     }
 
     public static String printLongestCommonSubsequence(String s1, String s2){
