@@ -8,6 +8,9 @@ package BitManipulation;
 //  Last Bit of an odd number will be always 1.
 //  Odd check is -> n & 1 == 1
 //  Divide by 2  -> n >> 1
+//  XOR -> a ^ a = 0;
+//  XOR -> a ^ b ^ a = b;
+//  XOR -> a ^ 0 = a;
 
 //  One-Liner:
 //        1)	Swapping Two Numbers :
