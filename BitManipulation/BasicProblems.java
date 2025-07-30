@@ -12,6 +12,13 @@ package BitManipulation;
 //  XOR -> a ^ b ^ a = b;
 //  XOR -> a ^ 0 = a;
 
+
+
+//        |  -> will be used to set
+//        ^  -> will be used to toggle
+//        &  -> will be used to check
+//        &~ -> will be used to clear
+
 //  One-Liner:
 //        1)	Swapping Two Numbers :
 //                  a = (a^b);
