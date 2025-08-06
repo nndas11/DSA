@@ -2,8 +2,12 @@
   <dictionary name="project">
     <words>
       <w>dijkstras</w>
+      <w>hierholzers</w>
+      <w>kosaraju's</w>
+      <w>kosarajus</w>
       <w>kruskals</w>
       <w>leetcode</w>
+      <w>torjan's</w>
     </words>
   </dictionary>
 </component>
