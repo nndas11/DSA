@@ -8,6 +8,14 @@ package BinarySearch;
 //  Then we can compare the mid and mid - 1 or mid and mid + 1 element.
 //  In some question we compare the mid with left and right and so on.
 
+//  There are questions, where we find the pivot element and then do BS.
+//  For finding pivot -> compare with right index only.
+
+
+//  Basic Questions:
+//  Search in Rotates Sorted Array: Finding the pivot element and do BS on the required area.
+//  Find Peak Element:  Go to the area, where they can be a bigger element.
+
 
 public class Main {
     public static void main(String[] args) {
