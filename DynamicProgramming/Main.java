@@ -34,6 +34,13 @@ package DynamicProgramming;
 //      find min       -> min of all stuff.
 //      find max       -> max of all stuff.
 
+
+
+//  Subsequence -> order should be same.
+//  Subset -> no ordering, we can pick element in any way.
+//  For Subset -> order does not matter -> so we can do sorting.
+
+
 public class Main {
     public static void main(String[] args) {
 
