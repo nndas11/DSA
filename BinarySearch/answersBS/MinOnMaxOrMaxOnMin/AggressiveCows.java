@@ -11,7 +11,7 @@ package BinarySearch.answersBS.MinOnMaxOrMaxOnMin;
 
 import java.util.Arrays;
 
-public class AgressiveCows {
+public class AggressiveCows {
     public static void main(String[] args) {
         System.out.println(aggressiveCows(new int[]{0,3,4,7,10, 9}, 4));
     }
@@ -26,9 +26,9 @@ public class AgressiveCows {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
 
-        for(int i=0;i<n;i++){
-            max = Math.max(max, stalls[i]);
-            min = Math.min(min, stalls[i]);
+        for (int stall : stalls) {
+            max = Math.max(max, stall);
+            min = Math.min(min, stall);
         }
 
         int l = 1; // minimum distance can be 1
