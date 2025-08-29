@@ -7,6 +7,12 @@ package BinarySearch.answersBS.MinOnMaxOrMaxOnMin;
 // You need to allocate books to students such that each student gets at least one book and the maximum number of pages allocated to a student is minimized.
 // Return the minimum possible value of the maximum number of pages allocated to a student.
 
+//  Another variation which is almost same is Painter's Partition Problem.
+//  Here we need to find the minimum time to paint all the boards.
+//  The only difference is instead of pages we have time and instead of books we have boards
+//  and instead of students we have painters.
+//  The approach is same, only the variable names change.
+
 public class AllocationOfBooks {
     public static void main(String[] args) {
         System.out.println(allocationOfBooks(new int[]{12,34,67,90}, 2));
