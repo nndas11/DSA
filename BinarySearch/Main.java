@@ -17,6 +17,8 @@ package BinarySearch;
 //  Find Peak Element:  Go to the area, where they can be a bigger element.
 
 
+//  DIFFERENT PATTERNS AND VARIATIONS OF BINARY SEARCH:
+
 public class Main {
     public static void main(String[] args) {
 
