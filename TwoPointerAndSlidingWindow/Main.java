@@ -12,12 +12,19 @@ package TwoPointerAndSlidingWindow;
 
 //  3. Number of subarrays or substring with where condition.
 //      Solved using pattern 2
-//      Number of Substrings Containing All Three Characters -> check this problem
+//      Number of Substrings Containing All Three Characters -> check this problem.
+//      Counting forwards and backwards -> check this problem.
 
 //  4. Find shortest/minimum window with condition.
 
 //  5. Two Pointer Technique (Opposite Directions).
 //  6. Two Pointer Technique (Same Directions).
+
+
+//  Popular Variations of Sliding Window and Two Pointer:
+//  Used for finding the count.
+//  exactly(goal)=atMost(goal)−atMost(goal−1) -> used to find the number of subarrays with sum k. -> only works for positive numbers.
+//
 
 
 public class Main {
