@@ -22,9 +22,11 @@ package TwoPointerAndSlidingWindow;
 
 
 //  Popular Variations of Sliding Window and Two Pointer:
-//  Used for finding the count.
-//  exactly(goal)=atMost(goal)−atMost(goal−1) -> used to find the number of subarrays with sum k. -> only works for positive numbers.
-//
+//  Used for finding the count. -> used to find the number of subarrays
+//  exactly(goal)=atMost(goal)−atMost(goal−1) ->
+//  used to find the number of subarrays with sum k. -> only works for positive numbers.
+//  Also used to find the number of substrings with exactly k distinct characters.
+//  Number of Substrings Containing All Three Characters -> check this problem.
 
 
 public class Main {
