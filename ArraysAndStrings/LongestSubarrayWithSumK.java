@@ -13,6 +13,7 @@ import java.util.HashMap;
 public class LongestSubarrayWithSumK {
     public static void main(String[] args) {
         System.out.println(longestSubarrayWithSumK(new int[]{1, -1, 5, -2, 3}, 3));
+        System.out.println(longestSubarrayWithSumK(new int[]{2,0,0,3},3));
     }
 
     private static int longestSubarrayWithSumK(int[] arr, int k){
@@ -54,6 +55,7 @@ public class LongestSubarrayWithSumK {
                 maxLength = Math.max(maxLength, i - map.get(prefixSum - k));
 
             map.putIfAbsent(prefixSum, i); // only put if not already present to maintain the longest length.
+//            think of case with 0 like [2, 0, 0, 3] with k = 3
         }
         return maxLength;
     }
