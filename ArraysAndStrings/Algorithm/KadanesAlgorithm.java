@@ -1,4 +1,4 @@
-package ArraysAndStrings;
+package ArraysAndStrings.Algorithm;
 
 
 // Time Complexity: O(n)
