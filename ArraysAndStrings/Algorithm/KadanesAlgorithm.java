@@ -7,8 +7,8 @@ package ArraysAndStrings.Algorithm;
 public class KadanesAlgorithm {
     public static void main(String[] args) {
         int[] nums = {4,-5,2,-2,7,5};
-        int maxSum = Kadanes(nums);
-        System.out.println("Maximum Sub-array sum is:" + maxSum);
+        int[] maxSum = printSubArray(nums);
+        System.out.println("Maximum Sub-array sum is:" + maxSum[0] + " to " + maxSum[1]);
     }
 
      static int KadanesAlgo(int[] nums){
@@ -36,6 +36,33 @@ public class KadanesAlgorithm {
             currSum = Math.max(currSum,0);
         }
         return maxSum;
+    }
+
+    private static int[] printSubArray(int[] nums){
+        int n = nums.length;
+        int maxSum = nums[0];
+        int currSum = 0;
+
+        int start = -1;
+        int end = -1;
+        int s = -1;
+
+        for(int i=0;i<n;i++){
+            if(currSum == 0){
+                // potential start of the sub-array
+                s  = i;
+
+            }
+            currSum += nums[i];
+            if(currSum > maxSum){
+                maxSum = currSum;
+                start = s;
+                end = i;
+            }
+            if(currSum < 0)
+                currSum = 0;
+        }
+        return new int[]{start, end};
     }
 }
 
