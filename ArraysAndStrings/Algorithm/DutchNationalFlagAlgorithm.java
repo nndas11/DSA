@@ -5,6 +5,8 @@ package ArraysAndStrings.Algorithm;
 //  TC: O(n)
 //  SC: O(1)
 
+//  Cannot guarantee the order of elements.
+
 public class DutchNationalFlagAlgorithm {
     public static void main(String[] args) {
 
