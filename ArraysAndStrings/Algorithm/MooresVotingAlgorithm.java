@@ -25,6 +25,20 @@ public class MooresVotingAlgorithm {
                 count--;
             }
         }
-        return candidate;
+
+//        verification step -> IMP mainly for interview purpose
+//        Also need for majority element 2 problem in leetcode.
+        count = 0;
+        for(int num: arr){
+            if(num == candidate){
+                count++;
+            }
+        }
+        if(count > arr.length/2){
+            return candidate;
+        }
+        return -1; // no majority element
+
+
     }
 }
